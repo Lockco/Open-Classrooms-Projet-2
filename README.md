@@ -53,9 +53,10 @@ Le programme récupère puis exportents les informations suivantes au format csv
     ```git clone https://github.com/Lockco/Open-Classrooms-Projet-2```
     
     Vous devez voir (depuis votre explorateur) les fichiers suivants:
-        * main.py
-        * category.py
-        * book.py
+        * __main__.py
+        * scrap_category.py
+        * scrap_book.py
+        * main_request.py
         * requirements.txt
     
     ![](telecharger_projet.gif)
