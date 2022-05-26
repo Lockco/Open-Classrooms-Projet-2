@@ -50,7 +50,7 @@ Pour la suite des instructions je conseil aux utilisateurs de windows d'utiliser
     
     Copier le programme source:
     
-    ```git clone https://github.com/Lockco/OC_projet_2```
+    ```git clone https://github.com/Lockco/Open-Classrooms-Projet-2```
     
      Vous devez voir (depuis votre explorateur) les fichiers suivants:
         * __main__.py
