@@ -92,17 +92,18 @@ Pour la suite des instructions je conseil aux utilisateurs de windows d'utiliser
         soupsieve==2.3.2.post1
         urllib3==1.26.9
 
-    
+    ![](creation_env.gif)
+
 5. **Lancement du programme**
 
     Pour le démarrage du programme dans votre terminal vérifier que vous êtes dans le dossier 
-    où le projet a été cloné puis lancer le script à l'aide de la commande suivante :
+    où le projet a été cloné avec la commande suivante
 
-    Pour vérifier le dossier dans lequel vous êtes :
-
-        ls
-
-    Pour lancer le programme :
+    Sous linux : ```ls``` 
+    Sous windows : ```dir```
+    
+    
+    puis lancer le script à l'aide de la commande suivante :
 
     ```py __main__.py```
 
