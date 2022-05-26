@@ -64,12 +64,12 @@ Pour la suite des instructions je conseil aux utilisateurs de windows d'utiliser
 
 2. **Creer un environnement virtuel.**
 
-    Depuis windows/mac/linux: ```python3 -m venv env```
+    Depuis windows/mac/linux: ```python3 -m venv env``` ou ```py -m venv env```
     
 
 3. **Activer l'environnement.**
     
-    Depuis windows: ```env\Scripts\activate.bat``` si cette commande ne fonctionne pas essayer la commande suivainte : ```env\Scripts\activate```
+    Depuis windows: ``` source env\Scripts\activate.bat``` si cette commande ne fonctionne pas essayer la commande suivainte : ```source env\Scripts\activate```
     
     Depuis mac/linux: ```source env/bin/activate```
 
