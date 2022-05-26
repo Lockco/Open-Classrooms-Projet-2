@@ -22,7 +22,6 @@ def catch_book_data(url):
     book_data['title'] = main.find('h1').get_text(strip=True)
     book_data['category'] = url.find('ul', class_='breadcrumb').find_all('a')[2].get_text(strip=True)
     book_data['price'] = main.find(class_='price_color').get_text(strip=True).replace('Â', '')
-    #book_data['number_available'] = main.find(class_='availability').get_text(strip=True)
     book_data['review_rating'] = ' '.join(main.find(class_='star-rating') \
                         .get('class')).replace('star-rating', '').strip()
     book_data['image_url'] = url.find(class_='thumbnail').find('img').get('src').replace('../../','https://books.toscrape.com/')
