@@ -35,7 +35,7 @@ Le programme récupère puis exportents les informations suivantes au format csv
 
 ## Installation
 
-
+Pour la suite des instructions je conseil aux utilisateurs de windows d'utiliser ([gitbash](https://git-scm.com/downloads)
 
 1. **Téléchargement du projet.**
 
@@ -52,16 +52,28 @@ Le programme récupère puis exportents les informations suivantes au format csv
     
     ```git clone https://github.com/Lockco/OC_projet_2```
     
-    Vous devez voir (depuis votre explorateur) les fichiers suivants:
-        * main.py
-        * category.py
-        * book.py
+     Vous devez voir (depuis votre explorateur) les fichiers suivants:
+        * __main__.py
+        * scrap_category.py
+        * scrap_book.py
+        * main_request.py
         * requirements.txt
     
-    ![](download_project.gif)
+    ![](telecharger_projet.gif)
 
 
-2. **Installer les paquets.**
+2. **Creer un environnement virtuel.**
+
+    Depuis windows/mac/linux: ```python3 -m venv env```
+    
+
+3. **Activer l'environnement.**
+    
+    Depuis windows: ```env\Scripts\activate.bat``` si cette commande ne fonctionne pas essayer la commande suivainte : ```env\Scripts\activate```
+    
+    Depuis mac/linux: ```source env/bin/activate```
+
+4. **Installer les paquets.**
 
     ```pip install -r requirements.txt```
 
@@ -81,10 +93,10 @@ Le programme récupère puis exportents les informations suivantes au format csv
         urllib3==1.26.9
 
     
-3. **Lancement du programme**
+5. **Lancement du programme**
 
     Pour le démarrage du programme dans votre terminal vérifier que vous êtes dans le dossier 
-    où le projet a été cloné puis lancer le script à l'aide de la  commande suivante :
+    où le projet a été cloné puis lancer le script à l'aide de la commande suivante :
 
     Pour vérifier le dossier dans lequel vous êtes :
 
@@ -110,10 +122,10 @@ Le programme récupère puis exportents les informations suivantes au format csv
 
             L'option 3 vous permet de quitter l'application
 
-    ![]
+    ![](lancer_programme.gif)
             
-## Codé avec
-[Visual Studio Code] (https://code.visualstudio.com/download) - Editeur de textes
+## Logiciel utilisé
+[Visual Studio Code] (https://code.visualstudio.com/download)
 
 
 
