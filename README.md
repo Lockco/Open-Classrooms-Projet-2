@@ -50,7 +50,7 @@ Le programme récupère puis exportents les informations suivantes au format csv
     
     Copier le programme source:
     
-    ```git clone https://github.com/Lockco/OC_projet_2```
+    ```git clone https://github.com/Lockco/Open-Classrooms-Projet-2```
     
     Vous devez voir (depuis votre explorateur) les fichiers suivants:
         * main.py
@@ -58,7 +58,7 @@ Le programme récupère puis exportents les informations suivantes au format csv
         * book.py
         * requirements.txt
     
-    ![](download_project.gif)
+    ![](telecharger_projet.gif)
 
 
 2. **Installer les paquets.**
