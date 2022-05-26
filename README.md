@@ -3,7 +3,7 @@
 
 La version bêta de ce programme permet d'automatiser la récupération des données liées aux livres, depuis le site http://books.toscrape.com/ . 
 
-Le programme récupère puis exportent les informations suivantes au format csv : 
+Le programme récupère puis exporte les informations suivantes au format csv : 
 
 1. Le titre (title)
 
