@@ -1,9 +1,9 @@
-# OC_projet_2_Loic
+# OpenClassrooms_projet_2_Loic
 # Version béta d'un programme de scraping.
 
-La version béta de ce programme permet d'automatiser la récupération des données liées aux livres, depuis le site http://books.toscrape.com/ . 
+La version bêta de ce programme permet d'automatiser la récupération des données liées aux livres, depuis le site http://books.toscrape.com/ . 
 
-Le programme récupère puis exportents les informations suivantes au format csv : 
+Le programme récupère puis exportent les informations suivantes au format csv : 
 
 1. Le titre (title)
 
@@ -35,12 +35,12 @@ Le programme récupère puis exportents les informations suivantes au format csv
 
 ## Installation
 
-Pour la suite des instructions je conseil aux utilisateurs de windows d'utiliser ([gitbash](https://git-scm.com/downloads)
+Pour la suite des instructions je conseille aux utilisateurs de Windows d'utiliser ([gitbash](https://git-scm.com/downloads)
 
 1. **Téléchargement du projet.**
 
 
-    Depuis votre terminal, placez vous à l'endroit souhaité:
+    Depuis votre terminal, placez-vous à l'endroit souhaité:
     
     ```cd [chemin d'accès]```  
     
@@ -69,7 +69,7 @@ Pour la suite des instructions je conseil aux utilisateurs de windows d'utiliser
 
 3. **Activer l'environnement.**
     
-    Depuis windows: ``` source env\Scripts\activate.bat``` si cette commande ne fonctionne pas essayer la commande suivainte : ```source env\Scripts\activate```
+    Depuis windows: ``` source env\Scripts\activate.bat``` si cette commande ne fonctionne pas essayer la commande suivante : ```source env\Scripts\activate```
     
     Depuis mac/linux: ```source env/bin/activate```
 
@@ -77,7 +77,7 @@ Pour la suite des instructions je conseil aux utilisateurs de windows d'utiliser
 
     ```pip install -r requirements.txt```
 
-    En executant la commande: ```pip freeze```, vous devez voir apparaitre cette liste: 
+    En éxecutant la commande: ```pip freeze```, vous devez voir apparaitre cette liste: 
 
         beautifulsoup4==4.11.1
         certifi==2022.5.18.1
@@ -96,7 +96,7 @@ Pour la suite des instructions je conseil aux utilisateurs de windows d'utiliser
 
 5. **Lancement du programme**
 
-    Pour le démarrage du programme dans votre terminal vérifier que vous êtes dans le dossier 
+    Pour le démarrage du programme dans votre terminal verifier que vous êtes dans le dossier 
     où le projet a été cloné avec la commande suivante
 
     Sous linux : ```ls``` 
@@ -112,7 +112,7 @@ Pour la suite des instructions je conseil aux utilisateurs de windows d'utiliser
         1. Extraire les informations des livres : 
 
             L'option 1 lancera le script et va récupérer les informations de chaque livre par catégorie.
-            Cela créera un dossier nomé "data" puis l'extraction de chaque catégorie créera un dossier dans lequel vous trouverez le fichier .csv contenant les données récupérées.
+            Cela créera un dossier nommé "data" puis l'extraction de chaque catégorie créera un dossier dans lequel vous trouverez le fichier .csv contenant les données récupérées.
 
         2. Extraire les couvertures des livres :
 
@@ -127,6 +127,11 @@ Pour la suite des instructions je conseil aux utilisateurs de windows d'utiliser
             
 ## Logiciel utilisé
 [Visual Studio Code] (https://code.visualstudio.com/download)
+[gitbash] (https://git-scm.com/downloads)
+
+## Remerciements
+
+Merci à **Julien**, **Thibault**, pour leur patience et leur aide précieuse. 
 
 
 
