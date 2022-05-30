@@ -32,6 +32,7 @@ Le programme récupère puis exporte les informations suivantes au format csv :
 ## Pré-requis 
 
 * Python 3 installé ([Télécharger Python](https://www.python.org/downloads/))
+* Git ([Télécharger Git](https://github.com/))
 
 ## Installation
 
