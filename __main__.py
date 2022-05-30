@@ -1,5 +1,4 @@
-from save_data import main, save_images
-
+import save_data
 
 
 URL = "http://books.toscrape.com/"
@@ -26,10 +25,10 @@ def display():
     while choix in choix_menu:
 
         if choix  == "1":
-            main(URL)
+            save_data.main(URL)
 
         elif choix == "2":
-            save_images(URL)
+           save_data.save_images(URL)
 
         elif choix == "3":
             print("Au revoir")
