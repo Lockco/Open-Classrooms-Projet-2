@@ -1,4 +1,6 @@
-from main_request import main, catch_images
+from save_data import main, save_images
+
+
 
 URL = "http://books.toscrape.com/"
 
@@ -27,7 +29,7 @@ def display():
             main(URL)
 
         elif choix == "2":
-            catch_images(URL)
+            save_images(URL)
 
         elif choix == "3":
             print("Au revoir")
