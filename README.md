@@ -60,7 +60,7 @@ Pour la suite des instructions je conseille aux utilisateurs de Windows d'utilis
         * main_request.py
         * requirements.txt
     
-    ![](telecharger_projet.gif)
+    ![](gif/telecharger_projet.gif)
 
 
 2. **Creer un environnement virtuel.**
@@ -93,7 +93,7 @@ Pour la suite des instructions je conseille aux utilisateurs de Windows d'utilis
         soupsieve==2.3.2.post1
         urllib3==1.26.9
 
-    ![](creation_env.gif)
+    ![](gif/creation_env.gif)
 
 5. **Lancement du programme**
 
@@ -124,7 +124,7 @@ Pour la suite des instructions je conseille aux utilisateurs de Windows d'utilis
 
             L'option 3 vous permet de quitter l'application
 
-    ![](lancer_programme.gif)
+    ![](gif/lancer_programme.gif)
             
 ## Logiciel utilisé
 [Visual Studio Code] (https://code.visualstudio.com/download)

@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup as bs
 from scrap_category import save_book_data
-from scrap_book import book_request
+from scrap_book import catch_parser_from_url
 import requests
 import re
 from pathlib import Path
@@ -26,17 +26,19 @@ def catch_all_page_catalogue(url):
             break
     return pages_url
 
+
 def extraction(url):
 
     print("Etape 2 : Extraction")
     all_category = []
-    soup = book_request(url)
+    soup = catch_parser_from_url(url)
     all_ul = soup.find('div', class_="side_categories").find('ul').find_all('li')[1:]
     for category_url in all_ul:
         href = category_url.find("a")["href"]
         url = URL+("/")+href
         all_category.append(url)
     return all_category
+
 
 def catch_images(url):
     """ Recuperation des images"""
@@ -60,6 +62,7 @@ def catch_images(url):
             print('nouveau nom',name)
             with open((f"data\images\{name}.jpg"), 'wb') as f:
                 f.write(requests.get(url).content)
+
 
 def main(url):
     print('Extraction en cours : ')
