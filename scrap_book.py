@@ -3,8 +3,8 @@ import requests
 import re
 
 
-def catch_parser_from_url(url):
-	"""Envoie de la requête pour récupérer le parser"""
+def catch_parser(url: str) -> bs:
+	"""Envoie de la requête à l'url et retourne de le contenu de la page html"""
 
 	print('Etape 3 : book_request')
 	response = requests.get(url)
@@ -12,10 +12,10 @@ def catch_parser_from_url(url):
 	return content_book_url
 
 
-def catch_book_data(url):
-	"""Recuperation des données des livres"""
+def catch_book_data(url: str) -> dict:
+	"""Récupération des données des livres"""
 
-	url = catch_parser_from_url(url)
+	url = catch_parser(url)
 	print('Etape 5 catch_book_data')
 	main = url.find(class_='product_main')
 	book_data = {}

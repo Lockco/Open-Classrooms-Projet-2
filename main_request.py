@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup as bs
 from scrap_category import save_book_data
-from scrap_book import catch_parser_from_url
+from scrap_book import catch_parser
 import requests
 import re
 from pathlib import Path
@@ -9,14 +9,13 @@ URL = "http://books.toscrape.com/"
 
 
 def catch_all_page_catalogue(url: str) -> list:
-    """ Recuperation des 50 pages du catologue pour récupérer les images"""
+    """ Récupération des 50 pages présente sur la page d'accueil du site pour récupérer les images"""
 
     page = 1
     pages_url = []
 
     
     while True:
-    #
         page_url = (url +'catalogue/' + f"page-{page}.html")
         page += 1
         response = requests.get(page_url)
@@ -27,21 +26,26 @@ def catch_all_page_catalogue(url: str) -> list:
     return pages_url
 
 
-def extraction(url):
+def catch_all_category_urls(url: str) -> list:
+    """ Récupération des urls de chaque catégorie présente sur le site"""
 
     print("Etape 2 : Extraction")
     all_category = []
-    soup = catch_parser_from_url(url)
+    soup = catch_parser(url)
     all_ul = soup.find('div', class_="side_categories").find('ul').find_all('li')[1:]
     for category_url in all_ul:
         href = category_url.find("a")["href"]
         url = URL+("/")+href
         all_category.append(url)
+    print(all_category)
     return all_category
 
 
-def catch_images(url):
-    """ Recuperation des images"""
+def catch_images(url: str):
+    """ 
+        Récupération des images à partir de liens récupérés dans la fonction catch_all_page_catalogue
+        Le stockage des images se fait dans dossier "images".
+    """
 
     page_url = catch_all_page_catalogue(url)
     folder = Path("data/images/")
@@ -64,11 +68,17 @@ def catch_images(url):
                 f.write(requests.get(url).content)
 
 
-def main(url):
+def main(url: str):
+    """
+        Fonction principale qui permet de sauvegarder toutes les données récupérées pour chaques urls
+        présentes dans la liste que retourne la fonction catch_all_category_urls 
+    """
+    
     print('Extraction en cours : ')
     print('Etape 1 = Départ')
     all_products = []
-    list_url = extraction(url)
+    list_url = catch_all_category_urls(url)
     print(url)
     for url in list_url:
         save_book_data(url)
+
