@@ -8,7 +8,7 @@ from pathlib import Path
 URL = "http://books.toscrape.com/"
 
 
-def catch_all_page_catalogue(url):
+def catch_all_page_catalogue(url: str) -> list:
     """ Recuperation des 50 pages du catologue pour récupérer les images"""
 
     page = 1
