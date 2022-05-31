@@ -8,7 +8,7 @@ def display():
 
     print("""
             ----------------------------------------
-            Bienvenu dans l'outil d'extraction de donnée
+            Bienvenue dans l'outil d'extraction de données
 
             choisissez une option :
 
