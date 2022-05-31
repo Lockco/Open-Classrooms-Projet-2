@@ -38,7 +38,7 @@ def save_images(url: str):
 
 def save_book_data(category_url: str):
 	"""Sauvegarde des informations récupérées pour chaque livre"""
-	
+
 	books_data = []
 	pages_urls = scraping.catch_pages_url(category_url)
 	books_url = scraping.catch_books_urls(pages_urls)

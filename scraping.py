@@ -16,20 +16,20 @@ def catch_parser(url: str) -> bs:
 
 
 def catch_all_page_catalogue(url: str) -> list:
-    """ Récupération des 50 pages présente sur la page d'accueil du site pour récupérer les images"""
+	""" Récupération des 50 pages présente sur la page d'accueil du site pour récupérer les images"""
 
-    page = 1
-    pages_url = []
-    print('Récupération des urls en cours à partir de "http://books.toscrape.com/"...')
-    while True:
-        page_url = (url +'catalogue/' + f"page-{page}.html")
-        page += 1
-        response = requests.get(page_url)
-        if response.status_code == 200:
-            pages_url.append(page_url)
-        else:
-            break
-    return pages_url
+	page = 1
+	pages_url = []
+	print('Récupération des urls en cours à partir de "http://books.toscrape.com/"...')
+	while True:
+		page_url = (url + 'catalogue/' + f"page-{page}.html")
+		page += 1
+		response = requests.get(page_url)
+		if response.status_code == 200:
+			pages_url.append(page_url)
+		else:
+			break
+	return pages_url
 
 
 def catch_pages_url(category_url: str) -> int:
@@ -116,14 +116,14 @@ def catch_book_data(url: str) -> dict:
 
 
 def catch_all_category_urls(url: str) -> list:
-    """ Récupération des urls de chaque catégorie présente sur le site"""
+	""" Récupération des urls de chaque catégorie présente sur le site"""
 
-    print('Récupération des urls des catégorie en cours ...')
-    all_category = []
-    soup = catch_parser(url)
-    all_ul = soup.find('div', class_="side_categories").find('ul').find_all('li')[1:]
-    for category_url in all_ul:
-        href = category_url.find("a")["href"]
-        url = URL+("/")+href
-        all_category.append(url)
-    return all_category
+	print('Récupération des urls des catégorie en cours ...')
+	all_category = []
+	soup = catch_parser(url)
+	all_ul = soup.find('div', class_="side_categories").find('ul').find_all('li')[1:]
+	for category_url in all_ul:
+		href = category_url.find("a")["href"]
+		url = URL + ("/") + href
+		all_category.append(url)
+	return all_category
