@@ -32,20 +32,6 @@ def catch_all_page_catalogue(url: str) -> list:
     return pages_url
 
 
-def catch_all_category_urls(url: str) -> list:
-    """ Récupération des urls de chaque catégorie présente sur le site"""
-
-    all_category = []
-    soup = catch_parser(url)
-    all_ul = soup.find('div', class_="side_categories").find('ul').find_all('li')[1:]
-    for category_url in all_ul:
-        href = category_url.find("a")["href"]
-        url = URL+("/")+href
-        all_category.append(url)
-        print('Récupération de la catégorie : ', category_url)
-    return all_category
-
-
 def catch_pages_url(category_url: str) -> int:
 	""" Récupération des urls des pages à partir des urls de chaque catégorie"""
 

@@ -42,20 +42,19 @@ def save_book_data(category_url: str):
 	books_data = []
 	pages_urls = scraping.catch_pages_url(category_url)
 	books_url = scraping.catch_books_urls(pages_urls)
-
+    
 	for url in books_url:
-		
+        
 		book = scraping.catch_book_data(url)
 		books_data.append(book)
-
 		file_name = books_data[0]["category"]
 		folder = Path(f"data\{file_name}")
 		folder.mkdir(parents=True, exist_ok=True)
-
+    
 	print('Sauvegarde de : ', file_name)
 	pd.DataFrame(books_data).to_csv(f'data/{file_name}/{file_name}.csv', encoding='utf-8')
 
-	return file_name, books_data
+	return books_data
 
 
 def main(url: str):
@@ -65,9 +64,10 @@ def main(url: str):
     """
     
     print('Extraction en cours : ')
-    # all_products = []
+    
     list_url = scraping.catch_all_category_urls(url)
-    print(url)
+    
     for url in list_url:
+        
         save_book_data(url)
 
