@@ -8,7 +8,7 @@ URL = "http://books.toscrape.com/"
 
 
 def catch_parser(url: str) -> bs:
-	"""Envoie de la requête à l'url et retourne de le contenu de la page html"""
+	"""Envoi de la requête à l'url et retourne le contenu de la page html"""
 
 	response = requests.get(url)
 	content_book_url = bs(response.content, 'html.parser')
