@@ -65,7 +65,7 @@ def main(url: str):
     """
     
     print('Extraction en cours : ')
-    all_products = []
+    # all_products = []
     list_url = scraping.catch_all_category_urls(url)
     print(url)
     for url in list_url:

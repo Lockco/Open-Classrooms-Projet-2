@@ -55,9 +55,10 @@ Pour la suite des instructions je conseille aux utilisateurs de Windows d'utilis
     
      Vous devez voir (depuis votre explorateur) les fichiers suivants:
         * __main__.py
-        * scrap_category.py
-        * scrap_book.py
-        * main_request.py
+        * __init__.py
+        * save_data.py
+        * scraping.py
+        * README.md
         * requirements.txt
     
     ![](gif/telecharger_projet.gif)
@@ -67,7 +68,6 @@ Pour la suite des instructions je conseille aux utilisateurs de Windows d'utilis
 
     Depuis windows/mac/linux: ```python3 -m venv env``` ou ```py -m venv env```
     
-
 3. **Activer l'environnement.**
     
     Depuis windows: ``` source env\Scripts\activate.bat``` si cette commande ne fonctionne pas essayer la commande suivante : ```source env\Scripts\activate```
@@ -75,6 +75,9 @@ Pour la suite des instructions je conseille aux utilisateurs de Windows d'utilis
     Depuis mac/linux: ```source env/bin/activate```
 
 4. **Installer les paquets.**
+
+    Attention : pour éviter de rencontrer des problème avec ```pip``` veillez à vérifier que PYTHONPATH soit correctement configurées : 
+    ([PYTHONPATH](https://datatofish.com/add-python-to-windows-path/))
 
     ```pip install -r requirements.txt```
 
