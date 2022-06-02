@@ -24,11 +24,15 @@ def display():
 
     
     if choix not in choix_menu:
+
         print(" Saisi invalide ")
         return display()
+
     else:
+
         if choix  == "1":
             save_data.main(URL)
+            print("Extractions des informations terminées. ")
 
         elif choix == "2":
             save_data.save_images(URL)
