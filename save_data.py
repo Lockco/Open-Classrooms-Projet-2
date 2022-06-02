@@ -10,26 +10,26 @@ URL = "http://books.toscrape.com/"
 
 def save_images(url: str):
     """ 
-        Récupération des images à partir de liens récupérés dans la fonction catch_all_page_catalogue
+        Récupération des images à partir des 50 pages du catalogue.
         Le stockage des images se fait dans dossier "images".
     """
 
-    page_url = scraping.catch_all_page_catalogue(url)
+    page_url = [f'http://books.toscrape.com/catalogue/page-{i}.html' for i in range(1, 51)]
+
     print("Création du dossier images")
     folder = Path("data/images/")
     folder.mkdir(parents=True, exist_ok=True)
+
     for links in page_url:
         print('Extraction de la page : ', links)
         result = requests.get(links)
         content = result.text
-        content_page = bs(content, 'lxml')
-        images = content_page.find_all('img')
-        
+        content_page = bs(content, 'html.parser')
+        images = content_page.find_all('img')     
 
         for image in images:
             name = image['alt']
             url =(URL + image['src'])
-            print(name)
             name = re.sub(r"['\"[\]{}()?\-\+*&é;:./!,$=#]*","",name)
             print('Enregistrement de la couverture : ',name)
             with open((f"data\images\{name}.jpg"), 'wb') as f:
@@ -48,11 +48,11 @@ def save_book_data(category_url: str):
 		book = scraping.catch_book_data(url)
 		books_data.append(book)
 		file_name = books_data[0]["category"]
-		folder = Path(f"data\{file_name}")
+		folder = Path(f"data\csv\{file_name}")
 		folder.mkdir(parents=True, exist_ok=True)
     
 	print('Sauvegarde de : ', file_name)
-	pd.DataFrame(books_data).to_csv(f'data/{file_name}/{file_name}.csv', encoding='utf-8')
+	pd.DataFrame(books_data).to_csv(f'data/couverture/{file_name}/{file_name}.csv', encoding='utf-8')
 
 	return books_data
 

@@ -15,23 +15,6 @@ def catch_parser(url: str) -> bs:
 	return content_book_url
 
 
-def catch_all_page_catalogue(url: str) -> list:
-	""" Récupération des 50 pages présente sur la page d'accueil du site pour récupérer les images"""
-
-	page = 1
-	pages_url = []
-	print('Récupération des urls en cours à partir de "http://books.toscrape.com/"...')
-	while True:
-		page_url = (url + 'catalogue/' + f"page-{page}.html")
-		page += 1
-		response = requests.get(page_url)
-		if response.status_code == 200:
-			pages_url.append(page_url)
-		else:
-			break
-	return pages_url
-
-
 def catch_pages_url(category_url: str) -> int:
 	""" Récupération des urls des pages à partir des urls de chaque catégorie"""
 
