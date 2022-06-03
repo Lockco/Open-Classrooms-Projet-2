@@ -34,7 +34,7 @@ def catch_books_urls(pages_urls: list) -> list:
 	""" Récupération des urls de tous les livres présents dans chaque catégorie"""
 
 	books_url = []
-	print('Récapération des livres en cours ...')
+	print('Récupération des livres en cours ...')
 	for page_url in pages_urls:
 		content = catch_parser(page_url)
 		titles = content.find_all("h3")
@@ -64,7 +64,7 @@ def catch_number_of_pages_from_category(categories_url: str) -> int:
 	page_in_int = int(number_element_page)
 	division_pages = page_in_int / 20
 	number_of_page = math.ceil(division_pages)
-	print(f'Vérification du nombre de page présente {number_of_page} ont été récupérées')
+	print(f'Vérification du nombre de pages présente {number_of_page} ont été récupérées')
 	return number_of_page
 
 
@@ -101,7 +101,7 @@ def catch_book_data(url: str) -> dict:
 def catch_all_category_urls(url: str) -> list:
 	""" Récupération des urls de chaque catégorie présente sur le site"""
 
-	print('Récupération des urls des catégorie en cours ...')
+	print('Récupération des urls des catégories en cours ...')
 	all_category = []
 	soup = catch_parser(url)
 	all_ul = soup.find('div', class_="side_categories").find('ul').find_all('li')[1:]
