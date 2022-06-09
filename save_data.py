@@ -52,7 +52,7 @@ def save_book_data(category_url: str):
 		folder.mkdir(parents=True, exist_ok=True)
     
 	print('Sauvegarde de : ', file_name)
-	pd.DataFrame(books_data).to_csv(f'data/couverture/{file_name}/{file_name}.csv', encoding='utf-8')
+	pd.DataFrame(books_data).to_csv(f'data/csv/{file_name}/{file_name}.csv', encoding='utf-8')
 
 	return books_data
 
@@ -70,4 +70,3 @@ def main(url: str):
     for url in list_url:
         
         save_book_data(url)
-
