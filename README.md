@@ -36,7 +36,7 @@ Le programme récupère puis exporte les informations suivantes au format csv :
 
 ## Installation
 
-Pour la suite des instructions je conseille aux utilisateurs de Windows d'utiliser ([gitbash](https://git-scm.com/downloads)
+Pour la suite des instructions je conseille aux utilisateurs de Windows d'utiliser ([gitbash](https://git-scm.com/downloads))
 
 1. **Téléchargement du projet.**
 
