@@ -95,6 +95,7 @@ Pour la suite des instructions je conseille aux utilisateurs de Windows d'utilis
         six==1.16.0
         soupsieve==2.3.2.post1
         urllib3==1.26.9
+        parse==1.19.0
 
     ![](gif/creation_env.gif)
 
